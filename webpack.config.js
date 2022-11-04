@@ -4,7 +4,9 @@ module.exports={
     mode:'development',
     entry:{
         main: path.resolve(__dirname,'./src/pages/main/main.js'),
-        login: path.resolve(__dirname,'./src/pages/login/login.js')
+        login: path.resolve(__dirname,'./src/pages/login/login.js'),
+        register: path.resolve(__dirname,'./src/pages/register/register.js'),
+
     },
     output:{
         path: path.resolve(__dirname, 'build'),
@@ -14,7 +16,7 @@ module.exports={
     plugins:[
         new HtmlWebpackPlugin({
             title:'Shopping Website',
-            filename:'index.html',
+            filename:'main/index.html',
             template:'./src/pages/main/main.html',
             chunks:['main']
         }),
@@ -23,7 +25,15 @@ module.exports={
             template:'./src/pages/login/login.html',
             chunks:['login']
 
-        })
+        }),
+        new HtmlWebpackPlugin({
+            filename:'register/index.html',
+            template:'./src/pages/register/register.html',
+            chunks:['register']
+
+        }),
+
+
     ],
     module:{
         rules:[{

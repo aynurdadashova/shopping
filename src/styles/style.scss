@@ -1,3 +1,92 @@
+*{
+    box-sizing: border-box;
+}
 h1 {
-    color: blue;
+    color:rgb(3, 78, 3);
+}
+
+.imgProdustc{
+    position: relative;
+    height: 400px;
+    width: auto;
+    background-image: url('../images/vapormax-2021-flyknit-mens-shoes-NpTfFz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .icons{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        i{
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            color:  rgb(66, 66, 66);
+        }
+        .fa-bag-shopping:hover{
+            color: rgb(3, 78, 3);
+        }
+        .fa-heart:hover{
+            color: rgb(3, 78, 3);
+        }
+    }
+}
+.titleProducts{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    h5{
+        margin-right: 20px;
+    }
+
+}
+
+.textProducts{
+    margin-top: 10px;
+    a{
+        text-decoration: none;
+
+    }
+    a:visited{
+        color: rgb(66, 66, 66);
+    }
+    a:hover{
+        color: #000;;
+    }
+    a:active{
+        color: #000;
+    }
+
+}
+.header-nav-category{
+    margin-bottom: 50px;
+}
+.col-md-4{
+    margin-bottom: 20px;
+}
+
+.pagination{
+    display: flex;
+    // grid-template-columns: 30px 30px 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    h4{
+        background-color:  rgb(66, 66, 66);
+        margin: 10px ;
+        border-radius: 4px;
+        a{
+        margin: 20px;
+        text-decoration: none;
+        }
+
+    }
+    h4:hover{
+        background-color: rgb(3, 78, 3);
+        cursor: pointer;
+
+    }
+    a{
+        color:#fff;
+    }
+
 }
