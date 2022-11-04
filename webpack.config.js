@@ -6,6 +6,7 @@ module.exports={
         main: path.resolve(__dirname,'./src/pages/main/main.js'),
         login: path.resolve(__dirname,'./src/pages/login/login.js'),
         register: path.resolve(__dirname,'./src/pages/register/register.js'),
+        product: path.resolve(__dirname,'./src/pages/product/product.js'),
 
     },
     output:{
@@ -32,6 +33,13 @@ module.exports={
             chunks:['register']
 
         }),
+        new HtmlWebpackPlugin({
+            filename:'product/index.html',
+            template:'./src/pages/product/product.html',
+            chunks:['product']
+
+        }),
+
 
 
     ],

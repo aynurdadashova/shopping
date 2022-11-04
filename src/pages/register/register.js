@@ -6,15 +6,8 @@ const numberInput=document.querySelector('#userNumber')
 const passwordInput=document.querySelector('#userPassword')
 const repeatPasswordInput=document.querySelector('#passwordRepeat')
 const formButton=document.querySelector('button')
-// console.log(nameInput)
-// console.log(mailInput)
-// console.log(numberInput)
-// console.log(passwordInput)
-// console.log(repeatPasswordInput)
-// console.log(formButton)
-// console.log(form)
 form.addEventListener('submit', onSubmit)
-export function onSubmit(event){
+function onSubmit(event){
 event.preventDefault()
 let patternName=/[a-zA-Z]+/g
 if(!nameInput.value.match(patternName)){

@@ -1,5 +1,4 @@
-import '../../styles/style.scss'
-// const page=window.location.search.slice(1).split('=')[1]
+import '../../styles/style.scss';
 (async function (){
     try{
         const response=await fetch('https://api.storerestapi.com/categories')
@@ -21,10 +20,6 @@ import '../../styles/style.scss'
         alert(error.message)
     }
 })();
-
-
-
-
 
 
 
@@ -82,7 +77,7 @@ import '../../styles/style.scss'
                 <div class="textProducts">
                 <div class="titleProducts">
                 <h5>
-                <a href="" class="titleLink">${items.title}</a>
+                <a href="/product/?${items.slug}" class="titleLink">${items.title}</a>
                 </h5>
                 <h5>$${items.price}</h5>
                 </div>

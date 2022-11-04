@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+h1 {
+    color:rgb(3, 78, 3);
+}
+
+.productImgs{
+        height: 500px;
+        width: auto;
+        background-image: url('../images/cq5dam.web.hebebed.1000.1000.crop.webp');
+        background-size: contain;
+        background-repeat: no-repeat;
+}
+.productText{
+    padding: 20px;
+    h3{
+        margin-bottom: 20px;
+    }
+    h4{
+        margin-bottom: 20px;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+}
+.btn{
+    button{
+        width: 200px;
+        height: 50px;
+        border: 1px solid rgb(3, 78, 3);
+        color:rgb(3, 78, 3);
+        border-radius: 4px;
+        
+    }
+    button:hover{
+        background-color:rgb(3, 78, 3);
+        color: #fff;
+    }
+
+}
