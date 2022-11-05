@@ -2,13 +2,15 @@
     box-sizing: border-box;
 }
 h1 {
-    color:rgb(3, 78, 3);
+    color:#1f1f1f;
 }
-
+.header-nav-category{
+    margin-bottom: 50px;
+}
 .productImgs{
         height: 500px;
         width: auto;
-        background-image: url('../images/cq5dam.web.hebebed.1000.1000.crop.webp');
+        background-image: url('../images/cq5dam.web.hebebed.1000.1000.crop\ \(1\).webp');
         background-size: contain;
         background-repeat: no-repeat;
 }
@@ -28,13 +30,12 @@ h1 {
     button{
         width: 200px;
         height: 50px;
-        border: 1px solid rgb(3, 78, 3);
-        color:rgb(3, 78, 3);
+        border: 1px solid #1f1f1f;
+        color:#1f1f1f;
         border-radius: 4px;
-        
     }
     button:hover{
-        background-color:rgb(3, 78, 3);
+        background-color:#1f1f1f;
         color: #fff;
     }
 

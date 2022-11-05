@@ -11,20 +11,20 @@ function onSubmit(event){
 event.preventDefault()
 let patternName=/[a-zA-Z]+/g
 if(!nameInput.value.match(patternName)){
-    alert('name string olmalidir')
+    alert('name string olmalıdır')
     return
 }
 if(!nameInput.value.trim()){
-    alert('name bosh olmamalidir')
+    alert('name boş olmamalıdır')
     return
 }
 
 if(!mailInput.value.trim()){
-    alert('mail bosh olmamalidir')
+    alert('mail boş olmamalıdır')
     return
 }
 if(!numberInput.value.trim()){
-    alert('number bosh olmamalidir')
+    alert('number boş olmamalıdır')
     return
 }
 let patternNumber=/\d/g
@@ -34,20 +34,19 @@ if(!numberInput.value.match(patternNumber)){
 }
 
 if(!passwordInput.value.trim()){
-    alert('password bosh olmamalidir')
+    alert('password boş olmamalıdır')
     return
 }
-let patternPassword=/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-if(!passwordInput.value.match(patternPassword)){
-    alert('Minimum eight characters, at least one letter and one number:')
+if(passwordInput.value.length<6){
+    alert('passwordun uzunlugu minimum 6 olmalıdır ')
     return
 }
 if(!repeatPasswordInput.value.trim()){
-    alert('password-repeat bosh olmamalidir')
+    alert('password-repeat boş olmamalıdır')
     return
 }
 if(repeatPasswordInput.value!==passwordInput.value){
-    alert("password don't match")
+    alert("parol uyğun gəlmir")
 }
 createUser()
 }

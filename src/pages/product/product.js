@@ -1,5 +1,6 @@
 import '../../styles/product.scss'
 const slug=window.location.search.slice(1);
+console.log(slug);
 (async function (){
     try{
         const response=await fetch('https://api.storerestapi.com/categories')
@@ -22,29 +23,19 @@ const slug=window.location.search.slice(1);
     }
 })();
 
-const productText=document.querySelector('.productText')
-let htmlString='';
-console.log(productText);
-(async function (){
-    try{
-        const response=await fetch(`https://api.storerestapi.com/products/?${slug}`)
+const h3=document.querySelector('h3')
+const h4=document.querySelector('h4')
+const p=document.querySelector('p');
+(async function(){
+     try{
+        const response=await fetch(`https://api.storerestapi.com/products/${slug}`)
         const categories=await response.json()
-           categories.data.forEach(items=>{
-            console.log(items)
-            htmlString+= `
-            <h3>${items.title}</h3>
-            <h4>$${items.price}</h4>
-            <p>Category : ${items.category.name}</p>
-            `
-
-           })
-           productText.innerHTML=htmlString
-           
-    }
+        h3.innerText= categories.data.title
+        h4.innerText= '$ '+ categories.data.price
+        p.innerText= categories.data.category.name
+        }
     catch(error){
         alert(error.message)
     }
-})();
 
-
-
+})()

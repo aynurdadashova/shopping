@@ -13,17 +13,16 @@ function onSubmit(event){
 event.preventDefault()
 
 if(!mailInput.value.trim()){
-    alert('mail bosh olmamalidir')
+    alert('mail boş olmamalıdır')
     return
 }
 
 if(!passwordInput.value.trim()){
-    alert('password bosh olmamalidir')
+    alert('password boş olmamalıdır')
     return
 }
-let patternPassword=/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-if(!passwordInput.value.match(patternPassword)){
-    alert('Minimum eight characters, at least one letter and one number:')
+if(passwordInput.value.length<6){
+    alert('passwordun uzunlugu minimum 6 olmalıdır ')
     return
 }
 console.log(mailInput.value)
@@ -48,7 +47,7 @@ async function createUser(){
         if(response.ok){
             alert('user created')
             setTimeout(()=>{
-                window.location.replace(`/login`)
+                window.location.replace(`/main`)
             }, 1000)
         }
         else{
